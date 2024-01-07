@@ -106,3 +106,102 @@ To Select Specific Tags with Specific class
   });
 ```
 
+
+
+- Example 5 - Multiple Event
+
+```bash
+ $("colored-div").on({
+ click: function(){
+  $(this).css("background-color",red);
+ },
+ mouseenter: function(){
+  $(this).css("background-color",green);
+ },
+ mouseleave: function(){
+  $(this).css("background-color",blue);
+ }
+ });
+
+```
+
+
+## Important
+- When our document got ready the execute the inside function
+```bash
+- $(document).ready(function(){
+  $("colored-div").on({
+  click: function(){
+  $(this).css("background-color",red);
+ }
+});
+
+```
+
+- OR
+```bash
+- $(function(){
+  $("colored-div").on({
+  click: function(){
+  $(this).css("background-color",red);
+ }
+});
+
+```
+
+- Alert will show before 3s
+```bash
+$("#btn").click(function(){
+  $("#colored-div").hide(3000);
+   alert("div hidden");
+});
+```
+- Use callback function
+```bash
+$("#btn").click(function(){
+  $("#colored-div").hide(3000,function(){
+   alert("div hidden");
+   });
+});
+
+```
+
+## Effects
+- Our div will be displayed and hidden in one second
+```bash
+$("#btn").click(function(){
+  $("#colored-div").hide(1000);
+});
+$("#btn2").click(function(){
+  $("#colored-div").show(1000);
+});
+
+```
+- Let's Animate
+```bash
+$("#btn").click(function(){
+  $("#colored-div").animate({
+   opacity: '0.5',
+   height: '20px',
+   width: '100px'
+   },5000);
+});
+
+```
+- Stop Animation
+```bash
+$("#btn2").click(function(){
+  $("#colored-div").stop();
+});
+```
+- Chaining
+```bash
+  $("#btn2").click(function(){
+  $("#colored-div").css("color","red").slideUp(2000).slideDown(1000);
+});
+```
+
+
+
+
+
