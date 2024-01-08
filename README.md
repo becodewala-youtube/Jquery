@@ -201,6 +201,38 @@ $("#btn2").click(function(){
 });
 ```
 
+## Manipulating HTML
+ - Fetching the text in alert
+```bash
+$("#btn").click(function(){
+  var txt = $("#colored-div").text;
+  alert(txt);//not include html tags
+});
+```
+- Fetching the text with tags in alert
+```bash
+$("#btn").click(function(){
+  var txt = $("#colored-div").html();
+  alert(txt);//include html tags
+});
+```
+- Replacing  HTML
+```bash
+$("#btn").click(function(){
+  var txt = $("#colored-div").html("<h1>this is heading</h1>");
+});
+```
+- Alerting Input Value
+```bash
+  $("#btn").click(function(){
+  var txt = $("#input").val();
+  alert(txt);
+});
+```
+
+
+
+
 
 
 
